@@ -1,0 +1,16 @@
+<apex:page standardController="Account" recordSetVar="Account">
+    <apex:pageBlock title="List of Accounts">
+        <apex:pageBlockTable value="{!Account}" var="A">
+            <apex:column value="{!A.Name}"/>
+            <apex:column value="{!A.Phone}"/>
+            <apex:column value="{!A.Type}"/>
+            <apex:column value="{!A.Owner.name}"/>
+            <apex:column value="{!A.Industry}"/>
+            <apex:column value="{!A.Phone}"/>
+            <apex:column value="{!A.website}"/>
+            <apex:column value="{!A.AnnualRevenue}"/>
+            <apex:column value="{!A.Billingcity}"/>
+            <apex:column value="{!A.BillingCountry}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+ </apex:page>

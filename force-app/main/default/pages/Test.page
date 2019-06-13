@@ -1,0 +1,31 @@
+<apex:page sidebar="false" showHeader="false" standardController="Opportunity">
+    <apex:form >
+        <apex:pageBlock >
+          <b style = "color:Blue"> OPPORTUNITY </b> 
+            <apex:pageBlockSection columns="2">
+                <apex:outputText label="OpportunityOwner" value="{!opportunity.Owner.Name}"/>
+                <apex:outputText style="text-decoration:underline" value="{!opportunity.Amount}"/>                              
+                <apex:outputField value="{!opportunity.IsPrivate}"/>
+                <apex:outputText value="{!opportunity.ExpectedRevenue}"/>
+                <apex:outputText value="{!opportunity.Name}"/>
+                <apex:outputText value="{!opportunity.CloseDate}"/>
+                <apex:outputText label="AccountName" value="{!opportunity.Account.name}" style="color:blue;font-weight:bold"/>
+                <apex:outputText value="{!opportunity.NextStep}"/>
+                <apex:outputText value="{!opportunity.Type}"/>
+                <apex:outputText value="{!opportunity.StageName}"/>
+                <apex:outputText value="{!opportunity.LeadSource}"/>
+                <apex:outputText value="{!opportunity.Probability}"/>
+                <apex:outputText value="{!opportunity.Discount_Percentage__c}"/>
+                <apex:outputText value="{!opportunity.Campaign.name}"/>
+                <apex:outputText value="{!opportunity.Approval_Status__c}"/>
+                <apex:outputText value="{!opportunity.MainCompetitors__c}"/>
+                <apex:outputText value="{!opportunity.CurrentGenerators__c}"/>
+                <apex:outputText value="{!opportunity.DeliveryInstallationStatus__c}"/>
+                <apex:outputText value="{!opportunity.TrackingNumber__c}"/>
+                <apex:outputText value="{!opportunity.Description}"/>
+                <apex:outputText label="CreatedBy" value="{!opportunity.CreatedBy.Name}" style="color:Red"/>
+                <apex:outputText label="LastModifiedBy" value="{!opportunity.LastModifiedBy.Name}" style="color:Red"/>
+           </apex:pageBlockSection> 
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,28 @@
+<apex:page standardController="Opportunity" recordSetVar="Opp">
+<apex:form >
+    <apex:pageBlock title="List View Filter Example" id="list">
+    
+     Filter: 
+    <apex:selectList value="{! filterId }" size="1">
+        <apex:selectOptions value="{! listViewOptions }"/>
+        <apex:actionSupport event="onchange" reRender="list"/>
+    </apex:selectList>
+
+        <apex:pageBlockTable value="{!opp}" var="o">
+        <apex:column value="{!o.Name}"/> 
+        <apex:column value="{!o.Account.name}"/>
+        <apex:column value="{!o.type}"/>  
+        <apex:column value="{!o.Amount}"/>
+        <apex:column value="{!o.Stagename}"/>
+        </apex:pageBlockTable>
+        
+      <apex:pageBlockButtons location="Bottom" >
+        <apex:commandButton value="First Page" action="{!First}" reRender="list"/>
+        <apex:commandButton value="Previous" action="{!Previous}" reRender="list"/>
+        <apex:commandButton value="Next" action="{!Next}" reRender="list"/>
+        <apex:commandButton value="Last page" action="{!Last}" reRender="list"/>
+      </apex:pageBlockButtons>
+      
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

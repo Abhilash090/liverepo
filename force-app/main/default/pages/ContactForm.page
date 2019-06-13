@@ -1,0 +1,6 @@
+<apex:page showHeader="false" sidebar="false" standardController="Contact">
+
+       <apex:outputfield value="{!Contact.Firstname}"/>
+        
+
+</apex:page>
